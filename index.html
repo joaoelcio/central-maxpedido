@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Abra um chamado de suporte de TI para a equipe da Colina.">
+<title>Central de Chamados de TI | Colina</title>
+<style>
+:root {
+  color-scheme: light;
+  --ink: #281b1c;
+  --red: #a81922;
+  --hero: #76131d;
+  --muted: #6a5253;
+  --paper: #fff9f5;
+  --line: #eedbd5;
+  --yellow: #ffd126;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.55 system-ui, sans-serif; }
+.wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+header { background: white; border-bottom: 1px solid var(--line); }
+header .wrap { min-height: 86px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.brand { display: block; width: 94px; height: auto; }
+.department { color: var(--muted); font-size: 14px; }
+main { padding-block: clamp(26px, 5vw, 58px); }
+.hero { display: grid; grid-template-columns: 1.5fr 1fr; align-items: center; gap: clamp(32px, 5vw, 76px); border-radius: 24px; background: linear-gradient(118deg, #59131a, var(--hero) 56%, var(--red)); color: white; padding: clamp(26px, 6vw, 76px); }
+h1 { font-size: clamp(42px, 6vw, 78px); letter-spacing: -.068em; line-height: 1; margin: 0 0 22px; max-width: 10ch; }
+.hero p { color: #ffe7e3; max-width: 41ch; margin: 0 0 28px; }
+.cta { display: inline-flex; min-height: 52px; gap: 24px; align-items: center; padding: 0 20px; border-radius: 10px; color: #351a0e; background: var(--yellow); text-decoration: none; font-weight: 750; }
+.cta:hover { background: #ffe274; }
+.cta:focus-visible { outline: 3px solid white; outline-offset: 5px; }
+.checklist { border: 1px solid #bc6265; border-radius: 16px; padding: 24px; background: #631721; }
+h2 { font-size: 24px; letter-spacing: -.035em; line-height: 1.2; margin: 0 0 14px; }
+.checklist ul { list-style: none; margin: 0; padding: 0; }
+.checklist li { display: flex; gap: 12px; align-items: baseline; color: #fff2ee; padding-block: 12px; }
+.checklist li + li { border-top: 1px solid #bc6265; }
+.tick { color: var(--yellow); }
+.topics { margin-top: 32px; padding: 20px 0 0; border-top: 2px solid var(--yellow); }
+ul.tags { display: flex; flex-wrap: wrap; gap: 9px; margin: 0; padding: 0; list-style: none; }
+.tags li { background: white; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 14px; }
+@media (max-width: 720px) {
+  .hero { grid-template-columns: 1fr; }
+  .wrap { width: calc(100% - 32px); }
+  .checklist { padding: 18px; }
+}
+.ticket { max-width: 740px; margin: 36px auto 0; padding: clamp(20px,5vw,40px); border: 1px solid var(--line); border-radius: 20px; background: white; scroll-margin-top: 20px; }
+.ticket form { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+.ticket label { display: grid; gap: 5px; font-weight: 650; }
+.ticket input, .ticket textarea, .ticket select { width:100%; min-height:44px; border:1px solid #a77e7e; border-radius:8px; padding:10px; background:white; color:var(--ink); font:inherit; }
+.ticket :focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+.ticket textarea { min-height: 120px; resize:vertical; }
+.full { grid-column:1 / -1; }
+.ticket button { border:0; cursor:pointer; }
+.ticket button:disabled { opacity:.65; cursor:wait; }
+#result { margin:0; }
+@media(max-width:600px) { .ticket form { grid-template-columns:1fr; } }
+.actions { display:flex; gap:12px; flex-wrap:wrap; }
+.secondary { background:#fff4ef; }
+.back { color:var(--red); font-weight:700; }
+[hidden] { display:none !important; }
+.admin-item { border-top:1px solid var(--line); padding:18px 0; overflow-wrap:anywhere; }
+.form-title { color:var(--ink); font-size:clamp(28px,5vw,40px); max-width:none; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <img class="brand" src="colina.png" width="397" height="305" alt="Colina Distribuidora">
+    <a class="cta secondary" href="https://chamados-ti-colina.ovoidhornbill32.chatgpt.site/ti">Painel de TI</a>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero" aria-labelledby="page-title">
+    <div>
+      <h1 id="page-title">Central de Chamados</h1>
+      <p>Solicite suporte de TI e informe o que está afetando seu trabalho.</p>
+      <a class="cta" href="https://chamados-ti-colina.ovoidhornbill32.chatgpt.site/login">Entrar como usuário</a>
+    </div>
+    <aside class="checklist" aria-labelledby="checklist-title">
+      <h2 id="checklist-title">O que informar</h2>
+      <ul>
+        <li><span class="tick" aria-hidden="true">✓</span>Seu setor e contato para retorno</li>
+        <li><span class="tick" aria-hidden="true">✓</span>O sistema ou equipamento afetado</li>
+        <li><span class="tick" aria-hidden="true">✓</span>O que aconteceu e quem foi afetado</li>
+      </ul>
+    </aside>
+  </section>
+  <section class="topics" aria-labelledby="topics-title">
+    <h2 id="topics-title">Com o que podemos ajudar</h2>
+    <ul class="tags">
+      <li>WinThor</li><li>MaxPedido</li><li>Rede e Wi-Fi</li><li>Computadores</li><li>Impressoras</li><li>Acesso e e-mail</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
